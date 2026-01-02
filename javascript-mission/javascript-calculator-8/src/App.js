@@ -1,6 +1,6 @@
 import Controller from "./Controller.js";
 import View from "./View.js";
-import Model from "./model.js";
+import Model from "./Model.js";
 
 class App {
   async run() {

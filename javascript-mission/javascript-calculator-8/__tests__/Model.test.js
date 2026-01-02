@@ -1,4 +1,4 @@
-import Model from "../src/model.js";
+import Model from "../src/Model.js";
 
 describe("Model 클래스 테스트", () => {
   const model = new Model();
