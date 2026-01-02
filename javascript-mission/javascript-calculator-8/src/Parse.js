@@ -8,18 +8,18 @@ class Parse {
     let deleteDelimiterStr = input;
 
     if (delimiter) {
-      deleteDelimiterStr = deleteDelimiterStr.slice(input.indexOf("n") + 1);
+      deleteDelimiterStr = deleteDelimiterStr.slice(input.indexOf("\\n") + 2);
+      console.log(deleteDelimiterStr);
       deleteDelimiterStr = deleteDelimiterStr.replaceAll(delimiter, ",");
     }
 
     deleteDelimiterStr = deleteDelimiterStr.replaceAll(":", ",");
-    console.log(deleteDelimiterStr.split(","));
     return deleteDelimiterStr.split(",");
   }
 
   static getCustomDelimiter(input) {
     if (input.startsWith("//")) {
-      const idx = input.indexOf("\\");
+      const idx = input.indexOf("\\n");
       const delimiter = input.slice(2, idx);
       return delimiter;
     }
