@@ -9,7 +9,6 @@ class Parse {
 
     if (delimiter) {
       deleteDelimiterStr = deleteDelimiterStr.slice(input.indexOf("\\n") + 2);
-      console.log(deleteDelimiterStr);
       deleteDelimiterStr = deleteDelimiterStr.replaceAll(delimiter, ",");
     }
 
